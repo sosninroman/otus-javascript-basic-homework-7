@@ -27,7 +27,11 @@ export default defineConfig([
       'jest/no-identical-title': 'error',
       'jest/prefer-to-have-length': 'warn',
       'jest/valid-expect': 'error',
+      'linebreak-style': 'off',
     },
   },
   eslintPluginPrettierRecommended,
+  {
+    rules: { 'linebreak-style': 'off' },
+  },
 ]);
