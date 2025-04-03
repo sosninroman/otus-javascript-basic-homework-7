@@ -1,7 +1,7 @@
 export function printMonth() {
   const num = prompt('Enter month number');
   if (typeof num !== 'number' || num > 12 || num < 1) {
-    throw 'Error: invalid month number';
+    throw new Error('invalid month number');
   }
   const months = new Map([
     [1, 'January'],

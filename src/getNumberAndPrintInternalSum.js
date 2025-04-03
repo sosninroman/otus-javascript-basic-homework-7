@@ -1,7 +1,7 @@
 export function getNumberAndPrintInternalSum() {
   let num = prompt('Enter the number: ');
   if (typeof num !== 'number' || num >= 1000 || num < 100) {
-    throw 'Error: invalid input';
+    throw new Error('invalid input');
   }
   let sum = 0;
   while (num > 0) {
