@@ -5,18 +5,18 @@ describe('Function printArraySum', () => {
     jest.spyOn(console, 'log').mockImplementation(() => {});
   });
 
-  test('prints 10 for [1,2,3,4]', () => {
+  test('выводит в консоль 10 для [1,2,3,4]', () => {
     printArraySum([1, 2, 3, 4]);
     expect(console.log).toHaveBeenCalledWith(10);
   });
 
-  test('throws an error if input value is not an Array', () => {
+  test('выбрасывает ошибку, если на вход подается не массив', () => {
     expect(() => {
       printArraySum('aaa');
     }).toThrow();
   });
 
-  test('throws an error if array contains not a number', () => {
+  test('выбрасывает ошибку, если во входном массиве находятся нечисловые значения', () => {
     expect(() => {
       printArraySum([1, 'two', 3]);
     }).toThrow();

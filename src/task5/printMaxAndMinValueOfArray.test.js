@@ -5,23 +5,23 @@ describe('Function printMaxAndMinValueOfArray', () => {
     jest.spyOn(console, 'log').mockImplementation(() => {});
   });
 
-  test('prints max and then min value of input array', () => {
+  test('выводит в консоль максимальное и минимальное значения в массиве', () => {
     printMaxAndMinValueOfArray([3, 2, 7, 5, 80, 1]);
     expect(console.log).toHaveBeenCalledWith(80, 1);
   });
 
-  test("doesn't call console.log if takes an empty array", () => {
+  test('не вызывает console.log, если на вход получен пустой массив', () => {
     printMaxAndMinValueOfArray([]);
     expect(console.log).not.toHaveBeenCalled();
   });
 
-  test('throws an Error if take input value that not an instance of Array', () => {
+  test('выбрасывает ошибку, если на вход подается не Array', () => {
     expect(() => {
       printMaxAndMinValueOfArray({});
     }).toThrow();
   });
 
-  test('throws an Error if any value in input array is not a number', () => {
+  test('выбрасывает ошибку, если среди входных данные есть нечисловые значения', () => {
     expect(() => {
       printMaxAndMinValueOfArray([1, 'two', 3]);
     }).toThrow();

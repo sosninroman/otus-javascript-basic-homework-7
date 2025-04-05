@@ -5,12 +5,12 @@ describe('Function printStringsLength', () => {
     jest.spyOn(console, 'log').mockImplementation(() => {});
   });
 
-  test('prints 10 for "Hello" and "world', () => {
+  test('Запрашивает у пользователя две строки и выводит суммарное количество символов в этих строках', () => {
     printStringsLength('Hello', 'world');
     expect(console.log).toHaveBeenCalledWith(10);
   });
 
-  test('throws an error if is called with wrong typs', () => {
+  test('Выбрасывает ошибку при недопустимом вводе', () => {
     expect(() => {
       printStringsLength();
     }).toThrow();

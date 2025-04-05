@@ -4,14 +4,14 @@ describe('Function getNumberAndPrintInternalSum', () => {
   beforeEach(() => {
     jest.spyOn(console, 'log').mockImplementation(() => {});
   });
-  test('prints 6 for 123', () => {
+  test('Запрашивает у пользователя трехзначное число и выводит в консоль сумму цифр этого числа', () => {
     window.prompt = jest.fn(() => {
       return 123;
     });
     getNumberAndPrintInternalSum();
     expect(console.log).toHaveBeenCalledWith(6);
   });
-  test('throws an error if for invalid input', () => {
+  test('Выбрасывает ошибку при попытке ввода недопустимых значений', () => {
     window.prompt = jest.fn(() => {
       return 12;
     });

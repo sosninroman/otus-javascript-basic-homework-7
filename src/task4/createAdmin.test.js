@@ -10,7 +10,7 @@ describe('Function createAdmin', () => {
       return AGE;
     });
   });
-  test("creates user with age from input and set property 'role' to 'admin'", () => {
+  test('создает пользователя с ролью admin', () => {
     const result = createAdmin();
     expect(result).toEqual({ name: 'John', age: AGE, role: 'admin' });
   });

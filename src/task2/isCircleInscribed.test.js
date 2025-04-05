@@ -1,19 +1,19 @@
 import { isCircleInscribed } from './isCircleInscribed';
 
 describe('Function isCircleInscribed', () => {
-  test('returns true for boundary case', () => {
+  test('граничный случай', () => {
     expect(isCircleInscribed(100, 25 * Math.PI)).toBeTruthy();
   });
-  test('returns true id curcle radius less than square side', () => {
+  test('радиус круга меньше, чем корень стороны', () => {
     expect(isCircleInscribed(100, 16 * Math.PI)).toBeTruthy();
   });
-  test('returns false if circle radius more than square side', () => {
+  test('радиус круга больше, чем корень стороны', () => {
     expect(isCircleInscribed(100, 30 * Math.PI)).toBeFalsy();
   });
-  test('works with floats well', () => {
+  test('работает корректно с float аргументами', () => {
     expect(isCircleInscribed(20.25, 5.0625 * Math.PI)).toBeTruthy();
   });
-  test('throws error for invalid inputs', () => {
+  test('выбрасывает ошибку для некорректных входных данных', () => {
     expect(() => {
       isCircleInscribed(-1, -5);
     }).toThrow();

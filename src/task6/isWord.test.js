@@ -1,15 +1,15 @@
 import { isWord } from './isWord';
 
 describe('Function isWord', () => {
-  test("returns true if input string doesn't contain space symbols", () => {
+  test('возвращает true, если входная строка является одним словом', () => {
     expect(isWord('word')).toBe(true);
   });
 
-  test('returns false if input string contains space symbols', () => {
+  test('возвращает false, если входная строка содержит несколько слов', () => {
     expect(isWord('to be or not to be')).toBe(false);
   });
 
-  test('returns false for arguments that are not strings', () => {
+  test('возвращает false, если на вход подается не строка', () => {
     expect(isWord(2)).toBe(false);
   });
 });

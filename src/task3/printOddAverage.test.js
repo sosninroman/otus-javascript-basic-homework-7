@@ -5,7 +5,7 @@ describe('Function printOddAverage', () => {
     jest.spyOn(console, 'log').mockImplementation(() => {});
   });
 
-  test('prints average for integers', () => {
+  test('выводит среднее арифметическое нечетных чисел от 0 до заданного значения', () => {
     const data = new Map([
       [1, 1],
       [2, 1],
@@ -21,7 +21,7 @@ describe('Function printOddAverage', () => {
     }
   });
 
-  test('throws if user enter not a number', () => {
+  test('выбрасывает ошибку, если заданное значение не является числом', () => {
     window.prompt = jest.fn(() => 'text');
     expect(() => {
       printOddAverage();

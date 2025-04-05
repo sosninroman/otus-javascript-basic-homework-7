@@ -5,7 +5,7 @@ describe('function printMonth', () => {
     jest.spyOn(console, 'log').mockImplementation(() => {});
   });
 
-  test('prints month for numbers from 1 to 12', () => {
+  test('выводит название месяца, соответствующее числу от 1 до 12', () => {
     for (let i = 1; i <= 12; ++i) {
       window.prompt = jest.fn(() => i);
       printMonth();
@@ -25,7 +25,7 @@ describe('function printMonth', () => {
     expect(console.log).toHaveBeenNthCalledWith(12, 'December');
   });
 
-  test('throws error for invalid input', () => {
+  test('выбрасывает ошибку для некорректных входных данных', () => {
     expect(() => {
       window.prompt = jest.fn(() => -1);
       printMonth();

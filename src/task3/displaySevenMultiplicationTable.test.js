@@ -1,12 +1,10 @@
 import { displaySevenMultiplicationTable } from './displaySevenMultiplicationTable';
 
-export { displaySevenMultiplicationTable } from './displaySevenMultiplicationTable';
-
 describe('Function displaySevenMultiplicationTable', () => {
   beforeAll(() => {
     jest.spyOn(console, 'log').mockImplementation(() => {});
   });
-  test('prints seven multiplication table', () => {
+  test('выводит в консоль таблицу умножения для 7', () => {
     displaySevenMultiplicationTable();
 
     expect(console.log).toHaveBeenNthCalledWith(1, '7 x 1 = 7');

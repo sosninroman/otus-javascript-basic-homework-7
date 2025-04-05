@@ -1,21 +1,21 @@
 import { doubleArrayValues } from './doubleArrayValues';
 
 describe('Function doubleArrayValues', () => {
-  test('creates new Array with doubled elements', () => {
+  test('создает новый массив, каждый элемент которого является удваенным значением из исходного', () => {
     expect(doubleArrayValues([1, 2, 3])).toEqual([2, 4, 6]);
   });
 
-  test('returns empty Array for empty input Array', () => {
+  test('для пустого массива возвращается пустой массив', () => {
     expect(doubleArrayValues([])).toEqual([]);
   });
 
-  test('throws an Error if input is not an instance of Array', () => {
+  test('выбрасывает ошибку, если на вход подается не Array', () => {
     expect(() => {
       doubleArrayValues(new Set());
     }).toThrow();
   });
 
-  test('throws an Error if input array contains values that are not numbers', () => {
+  test('выбрасывает ошибку, если во входном массиве находятся нечисловые элементы', () => {
     expect(() => {
       doubleArrayValues([1, 'two', 3]);
     }).toThrow();

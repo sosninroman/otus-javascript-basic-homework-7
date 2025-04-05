@@ -5,13 +5,13 @@ describe('Function printSumAndMul', () => {
     jest.spyOn(console, 'log').mockImplementation(() => {});
   });
 
-  test('prints 3 and 2 for 1 and 2', () => {
+  test('Выводит в консоль суииу и произведение аргументов', () => {
     printSumAndMul(1, 2);
     expect(console.log).toHaveBeenCalledWith(3, 2);
     expect(1 + 2).toEqual(3);
   });
 
-  test('throws an error if is called without arguments', () => {
+  test('Выбрасывает ошибку при вызове без аргументов', () => {
     expect(() => {
       printSumAndMul();
     }).toThrow();
@@ -23,7 +23,7 @@ describe('Function printSumAndMul', () => {
     }).toThrow();
   });
 
-  test('throws an error if is called with wrong types', () => {
+  test('Выбрасывает ошибку, если аргументы не являются числами', () => {
     expect(() => {
       printSumAndMul('one', 'two');
     }).toThrow();

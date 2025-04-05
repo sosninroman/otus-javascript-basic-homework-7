@@ -18,12 +18,12 @@ describe('Function pow', () => {
       pow(0, -3);
     }).toThrow();
   });
-  test('throws an Error if input values are not numbers', () => {
+  test('выбрасывает ошибку, если на вход подаются не числа', () => {
     expect(() => {
       pow('one', 2);
     }).toThrow();
   });
-  test("doesn't support float power", () => {
+  test('не поддержана нецелая степень', () => {
     expect(() => {
       pow(2, 2.5);
     }).toThrow();

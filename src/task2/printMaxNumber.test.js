@@ -5,12 +5,12 @@ describe('Function printMaxNumber', () => {
     jest.spyOn(console, 'log').mockImplementation(() => {});
   });
 
-  test('print 5 for 1 and 5', () => {
+  test('выводит в консоль максимальное значние среди переданных аргументов', () => {
     printMaxNumber(1, 5);
     expect(console.log).toHaveBeenCalledWith(5);
   });
 
-  test('throws if is called with invalid arguments', () => {
+  test('выбрасывает ошибку для невалидных входных данных', () => {
     expect(() => {
       printMaxNumber();
     }).toThrow();
@@ -25,7 +25,7 @@ describe('Function printMaxNumber', () => {
     }).toThrow();
   });
 
-  test('takes into account only the first two arguments', () => {
+  test('учитывает только первые два переданных аргумента', () => {
     printMaxNumber(1, 2, 3);
     expect(console.log).toHaveBeenCalledWith(2);
   });
